@@ -1,3 +1,16 @@
+# Medved's ESP32 Rainmaker 
+
+I created this repo to experiment with the ESP32 framework because I haven't had expsoure to it in my professional environments, but there are a lot of articles/posts about the platform.
+
+Goals
+- [x] Create a basic ESP32 demo with Rainmaker
+- [x] Utilize some GH features I've not used like projects
+- [] Build a simple, but reasonable release workflow in GH and Rainmaker.
+- [] Enhance basic example to perform garage door management (requirements coming soon)
+
+> [!NOTE]
+> I used the rainmaker switch example as a good starter project.  I've left the below text from this example.
+
 # Switch Example
 
 ## Build and Flash firmware

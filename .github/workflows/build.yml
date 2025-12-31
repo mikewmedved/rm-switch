@@ -30,3 +30,14 @@ jobs:
             build/bootloader/bootloader.bin
             build/partition_table/partition-table.bin
           retention-days: 30
+
+# TODO: Add a job to run automated tests, both unit & HIL.  This would include pushing something to Rainmaker
+# on a specific test device or group.  RM has APIs for this.
+
+# TODO: Add a job(s) to deal with releases in GH.  This would be triggered by creating a PR into the main branch,
+# probably from a release candidate branch.  Merges into main would require build passing, tests passing, release
+# notes prepared, and then approval from release manager.  The job would create a GH release, upload artifacts,
+# and tag the release in git.
+
+# TODO: Workflows for hotfixes.  Think about rollback scenarios & strategies.  Would again integrate with RM to
+# push hotfixes to affected devices.

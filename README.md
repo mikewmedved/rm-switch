@@ -11,6 +11,9 @@ Goals
 > [!NOTE]
 > I used the rainmaker switch example as a good starter project.  I've left the below text from this example.
 
+> [!NOTE]
+> See the [wiki page](https://github.com/mikewmedved/rm-switch/wiki) for more detailed notes/thoughts.
+
 # Switch Example
 
 ## Build and Flash firmware

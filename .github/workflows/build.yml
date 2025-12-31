@@ -2,43 +2,27 @@ name: ESP-IDF Build
 
 on:
   workflow_dispatch:
-    inputs:
-      target:
-        description: 'ESP32 target (esp32, esp32s2, esp32c2, esp32c5, esp32c6, esp32h2)'
-        required: false
-        default: 'esp32'
-        type: choice
-        options:
-          - esp32
-          - esp32s2
-          - esp32c2
-          - esp32c5
-          - esp32c6
-          - esp32h2
-
+    
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: espressif/idf:latest
-    
+        
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           submodules: 'recursive'
       
-      - name: Build project
-        shell: bash
-        run: |
-          . $IDF_PATH/export.sh
-          idf.py set-target ${{ inputs.target }}
-          idf.py build
+      - name: esp-idf build
+        uses: espressif/esp-idf-ci-action@v1
+        with:
+          esp_idf_version: v5.5.1
+          target: esp32
       
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: build-artifacts-${{ inputs.target }}
+          name: build-artifacts-esp32
           path: |
             build/*.bin
             build/*.elf

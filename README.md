@@ -1,6 +1,6 @@
 # Medved's ESP32 Rainmaker 
 
-I created this repo to experiment with the ESP32 framework because I haven't had expsoure to it in my professional environments, but there are a lot of articles/posts about the platform.
+I created this repo to experiment with the ESP32 framework because I haven't had exposure to it in my professional environments, but there are a lot of articles/posts about the platform.
 
 Goals
 - [x] Create a basic ESP32 demo with Rainmaker
